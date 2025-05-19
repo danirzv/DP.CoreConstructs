@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <InvariantGlobalization>false</InvariantGlobalization>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <PackageId>DP.CoreConstructs</PackageId>
+        <Title>DP.CoreConstructs</Title>
+        <IsPackable>true</IsPackable>
+        <Version>0.1.0-alpha</Version>
+        <Authors>DaniRzV</Authors>
+        <Company>DP</Company>
+        <PackageDescription>
+            Provides foundational seedwork for .NET applications,
+            including base classes for enumeration and value objects,
+            enhanced with custom serialization and model binding capabilities for streamlined API development.
+        </PackageDescription>
+        <RepositoryUrl>https://github.com/danirzv/DP.CoreConstructs.git</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/danirzv/DP.CoreConstructs</PackageProjectUrl>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageIcon>logo.256x256.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="../docs/logo.256x256.png" Pack="true" PackagePath=""/>
+        <None Include="../README.md" Pack="true" PackagePath=""/>
+        <None Include="../CONTRIBUTING.md" Pack="true" PackagePath=""/>
+        <None Include="../LICENSE" Pack="true" PackagePath=""/>
+    </ItemGroup>
+
+</Project>
