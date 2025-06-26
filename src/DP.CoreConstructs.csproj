@@ -31,4 +31,8 @@
         <None Include="../LICENSE" Pack="true" PackagePath=""/>
     </ItemGroup>
 
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.16" allowedVersions="[8,)" />
+    </ItemGroup>
+
 </Project>
