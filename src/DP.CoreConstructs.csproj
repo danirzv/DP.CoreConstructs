@@ -32,7 +32,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.16" allowedVersions="[8,)" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="[8,)" />
+        <PackageReference Include="NSwag.Generation" Version="14.4.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="8.1.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Presentation\NSwag\" />
     </ItemGroup>
 
 </Project>
