@@ -116,7 +116,7 @@ public static class CoreConstructsExtentions
         foreach (var descriptor in descriptors)
         {
             var valueObjectType = descriptor.BaseType!.GenericTypeArguments[0];
-            var standsFor = Type.MakeGenericSignatureType(typeof(ValueObjectDescriptor<>), valueObjectType);
+            var standsFor = typeof(ValueObjectDescriptor<>).MakeGenericType(valueObjectType);
             services.TryAdd(new ServiceDescriptor(standsFor, descriptor, ServiceLifetime.Singleton));
 
             services.Add(new ServiceDescriptor(typeof(ValueObjectDescriptor), descriptor, ServiceLifetime.Singleton));
@@ -126,7 +126,7 @@ public static class CoreConstructsExtentions
     }
 }
 
-public class MvcOptionsConfigurator(IEnumerable<ValueObjectDescriptor> descriptors)
+public class MvcOptionsConfigurator
     : IConfigureOptions<MvcOptions>
 {
     public void Configure(MvcOptions options)
@@ -161,7 +161,7 @@ public class ValueObjectBinderProvider : IModelBinderProvider
             return null;
         }
 
-        var type = Type.MakeGenericSignatureType(typeof(ValueObjectBinder<>), context.Metadata.ModelType);
+        var type = typeof(ValueObjectBinder<>).MakeGenericType(context.Metadata.ModelType);
 
         var binder = Activator.CreateInstance(type) as IModelBinder;
 
