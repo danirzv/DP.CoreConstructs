@@ -12,4 +12,10 @@ public class GeneralController : Controller
     {
         return pa.Value;
     }
+    
+    [HttpPost("Test")]
+    public string Test2(PhoneNumber pa)
+    {
+        return pa.Value;
+    }
 }

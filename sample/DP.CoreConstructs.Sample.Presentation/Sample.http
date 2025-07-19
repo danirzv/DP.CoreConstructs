@@ -1,5 +1,16 @@
 @Sample_HostAddress = http://localhost:5000
 
-GET {{Sample_HostAddress}}/api/Test?pa=111
+GET {{Sample_HostAddress}}/api/Test?pa.value=111
 Accept: application/json
 
+###
+
+
+POST {{Sample_HostAddress}}/api/Test
+Content-Type: application/json
+
+{
+  "pa.Value": "123"
+}
+
+###

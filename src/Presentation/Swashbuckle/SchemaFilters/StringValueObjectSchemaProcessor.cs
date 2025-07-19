@@ -1,6 +1,5 @@
 ﻿using DP.CoreConstructs.Domain;
 using Microsoft.OpenApi.Models;
-using NJsonSchema;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace DP.CoreConstructs.Presentation.Swashbuckle.SchemaFilters;

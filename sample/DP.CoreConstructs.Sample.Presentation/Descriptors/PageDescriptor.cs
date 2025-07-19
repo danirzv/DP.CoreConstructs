@@ -1,4 +1,4 @@
-﻿using DP.CoreConstructs.Presentation.JsonConverters;
+﻿using DP.CoreConstructs.Presentation;
 using DP.CoreConstructs.Sample.Domain;
 
 namespace DP.CoreConstructs.Sample.Presentation.Descriptors;

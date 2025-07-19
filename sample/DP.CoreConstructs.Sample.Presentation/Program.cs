@@ -1,4 +1,6 @@
+using DP.CoreConstructs.Presentation;
 using DP.CoreConstructs.Presentation.JsonConverters;
+using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,14 +15,14 @@ builder.Services.ScanValueObjectsOfAssembly<Program>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger(c => c.OpenApiVersion = OpenApiSpecVersion.OpenApi2_0);
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
+app.MapSwagger();
+
 app.MapControllers();
+
 
 app.Run();
